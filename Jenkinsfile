@@ -10,7 +10,7 @@ pipeline {
         stage ("Compile") {
             steps {
                 container('maven') {
-                    git branch: 'main', url: 'https://github.com/spring-projects/spring-petclinic.git'
+                    git branch: 'main', url: 'https://github.com/fgibelin-cbdemos/spring-petclinic.git'
                     withMaven(globalMavenSettingsConfig: 'maven-settings',
                               options: [junitPublisher(disabled: true, healthScaleFactor: 1.0)],
                               publisherStrategy: 'EXPLICIT') {
