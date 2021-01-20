@@ -1,3 +1,5 @@
+package org.springframework.samples.petclinic.flags;
+
 import io.rollout.configuration.RoxContainer;
 import io.rollout.flags.RoxFlag;
 import io.rollout.flags.RoxVariant;

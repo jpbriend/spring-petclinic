@@ -33,7 +33,7 @@ public class PetClinicApplication {
 	public static void main(String[] args) {
 
 		// Initialize Flags container class
-		org.springframework.samples.petclinic.flags.Flags flags = new org.springframework.samples.petclinic.flags.Flags();
+		Flags flags = new Flags();
 		
 		//Register the flags container
 		Rox.register("", flags);
