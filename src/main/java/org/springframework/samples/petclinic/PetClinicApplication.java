@@ -33,7 +33,7 @@ public class PetClinicApplication {
 	public static void main(String[] args) {
 
 		// Initialize Flags container class
-		Flags flags = new Flags();
+		FlagsController flags = new FlagsController();
 		
 		//Register the flags container
 		Rox.register("", flags);
