@@ -19,6 +19,8 @@ package org.springframework.samples.petclinic;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import io.rollout.rox.server.Rox;
+
 /**
  * PetClinic Spring Boot Application.
  *
@@ -29,6 +31,24 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PetClinicApplication {
 
 	public static void main(String[] args) {
+
+		// Initialize Flags container class
+		Flags flags = new Flags();
+		
+		//Register the flags container
+		Rox.register("", flags);
+    	// Setup the Rollout environment key
+		Rox.setup("5ffee55d0abfc1f2a9537456").get();
+    	// Boolean flag example
+    	if (flags.enableTutorial.isEnabled()) {
+      		System.out.println("Tutorial is ENABLED");
+    	} else {
+			System.out.println("Tutorial is DISABLED");
+		}
+
+		String titleColor = flags.titleColors.value();
+		System.out.println(String.format("Title color is %s", titleColor));
+
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
 
