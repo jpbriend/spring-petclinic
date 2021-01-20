@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.samples.petclinic.flags.Flags;
 
 import io.rollout.rox.server.Rox;
 
